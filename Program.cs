@@ -10,7 +10,7 @@ class Program
     private static readonly string clientId = Environment.GetEnvironmentVariable("CLIENT_ID") ?? throw new Exception("env:CLIENT_ID is missing");
     private static readonly string clientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET") ?? throw new Exception("env:CLIENT_SECRET is missing");
     private static readonly string redirectUri = "http://localhost:8080/";
-    private static readonly string[] scopes = { "chat:read", "chat:edit" }; // for irc
+    private static readonly string[] scopes = { "user:read:email", "chat:read", "chat:edit" }; // for irc
     private static readonly string tokenFilePath = "twitch_tokens.json";
     private static readonly HttpClient httpClient = new();
 
